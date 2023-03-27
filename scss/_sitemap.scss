@@ -1,0 +1,127 @@
+#sitemap {
+  background: linear-gradient(to bottom, #1D273E, #11182A);
+  padding: 25px 20px;
+  padding-bottom: 45px;
+  border-radius: 20px;
+  margin-top: 25px;
+
+  .breadcrumbs {
+    border-radius: 8px;
+    padding: 10px 15px;
+
+    .separator_gradient {
+      display: none;
+    }
+  }
+
+  .sitemap__title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .separator_gradient {
+      max-width: 10%;
+      background: linear-gradient(90deg, #ff4edf 9.92%, transparent);
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    .separator_gradient:first-child {
+      transform: rotate(180deg);
+    }
+  }
+
+  .sitemap__title_main {
+    font-size: 2.2em;
+    text-transform: uppercase;
+
+    span {
+      color: #fff;
+    }
+
+    .separator_gradient {
+      max-width: 30%;
+      background: linear-gradient(90deg, $blue 9.92%, transparent);
+    }
+  }
+
+  .sitemap__navigation {
+    margin-bottom: 40px;
+
+    ul {
+      border: 1px solid rgba(255, 255, 255, 0.075);
+      border-radius: 20px;
+      padding: 30px 60px;
+      display: grid;
+      row-gap: 15px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 40px;
+      box-shadow: inset 0 0 10px $blue;
+      position: relative;
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: rgb(202, 201, 201);
+        font-size: 14px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: .3s;
+
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 1px;
+          width: 0px;
+          background: linear-gradient(to right, $blue, transparent);
+          transition: .3s;
+        }
+
+        &:hover {
+          color: $blue;
+
+          &::after {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  .sitemap__category_list ul {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+  }
+
+  .sitemap__mob_btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, #0095ffb0, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: none;
+
+    svg,
+    path {
+      fill: #fff;
+      max-height: 40px;
+      height: 100%;
+      animation: dashbordBtn .8s cubic-bezier(0.4, 0, 1, 1) infinite alternate;
+    }
+  }
+}
