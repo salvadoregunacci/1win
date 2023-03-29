@@ -100,6 +100,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  column-gap: 10px;
+
+  svg {
+    margin-left: -6 px;
+  }
 
   &:hover {
     color: #fff;
@@ -113,6 +118,9 @@
 
 #review_game .info__title {
   text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 26px;
 }
 
 .rg_desc {
@@ -130,6 +138,25 @@
 
 .rg_desc__title {
   max-width: 150px;
+  width: 100%;
+}
+
+.rg_info h2 {
+  font-size: 24px;
+}
+
+.rg_info h3 {
+  font-size: 20px;
+}
+
+.rg_info .info__visible h2:nth-child(1),
+.info .info__visible h3:nth-child(1) {
+  margin-bottom: 25px;
+}
+
+.rg_info .info__open_btn {
+  height: 50px;
+  max-width: 200px;
   width: 100%;
 }
 
@@ -162,6 +189,7 @@
 .rg_title {
   font-size: 26px;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 
 .rg_more_games {
@@ -197,4 +225,69 @@
   font-size: 14px;
   margin-top: 5px;
   transition: .3s;
+}
+
+.rg_plus_minus {
+  display: flex;
+  column-gap: 25px;
+  margin: 30px 0;
+}
+
+.rg_block {
+  border-radius: 12px;
+  background: $darkblue;
+  padding: 15px;
+  padding-bottom: 25px;
+  max-width: 500px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25px;
+    right: 25px;
+    height: 6px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-size: 200% auto;
+  }
+}
+
+.rg_block__items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.rg_block__item {
+  display: flex;
+  column-gap: 10px;
+}
+
+.rg_plus {
+  .rg_block__title {
+    color: #2ada73;
+  }
+
+  &::before {
+    background: #24B260;
+  }
+}
+
+.rg_minus {
+  .rg_block__title {
+    color: #E83737;
+  }
+
+  &::before {
+    background: #E83737;
+  }
+}
+
+.rg_info .faq_section .faq_section__item {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
