@@ -46,6 +46,7 @@
 .rg_offer__title {
   font-size: 32px;
   font-weight: 900;
+  margin-bottom: 0;
 }
 
 .rg_offer__features {
@@ -196,7 +197,9 @@
   display: flex;
   align-items: center;
   column-gap: 15px;
+  row-gap: 15px;
   margin-top: 25px;
+  flex-wrap: wrap;
 }
 
 .rg_more_game:hover {
@@ -290,4 +293,8 @@
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.rg_breadcrumbs {
+  margin-top: 0px;
 }
